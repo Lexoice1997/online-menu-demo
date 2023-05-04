@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+.app {
+  padding: 10px;
+}
+
+.swiper {
+  width: 100%;
+}
