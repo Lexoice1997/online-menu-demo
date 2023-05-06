@@ -3,7 +3,7 @@ import { Categories } from '../../types/Category';
 
 export const apiService = createApi({
   reducerPath: 'pokemonApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://103.54.56.168' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://103-54-56-168.cloud-xip.com' }),
   tagTypes: ['Categories'],
   endpoints: (builder) => ({
     getAllCategories: builder.query<any, null>({

@@ -19,7 +19,9 @@ const initialState: FoodState = {
 
 export const searchFoods = createAsyncThunk('foods/searchFoods', async (name: string, thunkAPI) => {
   try {
-    const response = await axios.get(`http://103.54.56.168/menu/${name.length ? name : ':search'}`);
+    const response = await axios.get(
+      `https://103-54-56-168.cloud-xip.com/menu/${name.length ? name : ':search'}`
+    );
     return response.data;
   } catch (e) {
     return thunkAPI.rejectWithValue('Не удалось загрузить блюды');
@@ -28,7 +30,7 @@ export const searchFoods = createAsyncThunk('foods/searchFoods', async (name: st
 
 export const getAllFoods = createAsyncThunk('foods/getAllFoods', async (_, thunkAPI) => {
   try {
-    const response = await axios.get(`http://103.54.56.168/category`);
+    const response = await axios.get(`https://103-54-56-168.cloud-xip.com/category`);
     return response.data;
   } catch (e) {
     return thunkAPI.rejectWithValue('Не удалось загрузить блюды');
